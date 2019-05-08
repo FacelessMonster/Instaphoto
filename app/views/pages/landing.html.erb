@@ -1,7 +1,5 @@
-<% if user_signed_in?%>
-
-<% else %>
-<div class="jumbotron">
+<% unless user_signed_in?%>
+<div class=" container jumbotron">
   <h1 class="display-4"><b>Делитесь своими эмоциями!</b></h1>
   <p class="lead">Размещайте свои фотографии и подписывайтесь на публикации своих друзей.</p>
   <hr class="my-4">

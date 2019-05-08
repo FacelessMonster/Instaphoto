@@ -11,26 +11,12 @@
 
   <body>
     <div class="container-fluid container-background">
-      <div class="container">
 
-        <ul class="nav nav-inline">
-          <li class="nav-item">
-            <%=link_to 'Home', root_path, class: "nav-link active" %>
-          </li>
-          <li class="nav-item">
-            <%=link_to 'About', pages_about_path, class: "nav-link active" %>
-          </li>
-          <% if user_signed_in? %>
-          <li class="nav-item">
-            <%=link_to 'Exit', destroy_user_session_path, class: "nav-link active destroy_session", method: :delete %>
-          </li>
-          <% end %>
-        </ul>
-        
+        <%= render "layouts/navigation" %>
+
         <p class="notice"><%= notice %></p>
         <p class="alert"><%= alert %></p>
-          <%= yield %>
-      </div
+        <%= yield %>
     </div>
   </body>
 </html>
