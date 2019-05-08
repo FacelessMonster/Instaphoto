@@ -29,3 +29,10 @@ $jumbotron-bg: rgba(255,255,255, 0.2);
 .nav-inline {
   background-color: rgba(210, 215, 211, 0.2);
 }
+.container {
+  position: relative;
+}
+.destroy_session {
+  position: absolute;
+  right:10px;
+}

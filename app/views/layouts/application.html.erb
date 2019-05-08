@@ -20,6 +20,11 @@
           <li class="nav-item">
             <%=link_to 'About', pages_about_path, class: "nav-link active" %>
           </li>
+          <% if user_signed_in? %>
+          <li class="nav-item">
+            <%=link_to 'Exit', destroy_user_session_path, class: "nav-link active destroy_session", method: :delete %>
+          </li>
+          <% end %>
         </ul>
         
         <p class="notice"><%= notice %></p>
