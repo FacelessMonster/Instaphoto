@@ -7,9 +7,14 @@
       <%=link_to 'About', pages_about_path, class: "nav-link active" %>
     </li>
     <% if user_signed_in? %>
-    <li class="nav-item">
-      <%=link_to 'Exit', destroy_user_session_path, class: "nav-link active destroy_session", method: :delete %>
-    </li>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <%=current_user.email%>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <%=link_to 'Exit', destroy_user_session_path, class: "nav-link active destroy_session", method: :delete %>
+      </div>
+    </div>
     <% end %>
   </ul>
 </div>

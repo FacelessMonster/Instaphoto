@@ -28,11 +28,29 @@ $jumbotron-bg: rgba(255,255,255, 0.2);
 
 .nav-inline {
   background-color: rgba(210, 215, 211, 0.2);
+    position: relative;
 }
 .container {
   position: relative;
 }
+
+.dropdown-menu {
+  background-color: rgba(90,98,104, 1);
+}
+
+.btn-secondary {
+  font-size: 1.5rem;
+  background-color: rgba(46, 49, 49, 0.2);
+  border: 0px;
+  height: 100%;
+}
+
 .destroy_session {
+  color: rgba(255,255,255, 1);
+}
+
+.dropdown {
+  height: 100%;
   position: absolute;
-  right:10px;
+  right: 0%;
 }
