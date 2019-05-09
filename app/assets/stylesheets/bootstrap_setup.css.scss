@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Courgette|Pacifico');
 $display4-size: 2.5rem !default;
 $jumbotron-bg: rgba(255,255,255, 0.2);
 
@@ -53,4 +54,12 @@ $jumbotron-bg: rgba(255,255,255, 0.2);
   height: 100%;
   position: absolute;
   right: 0%;
+}
+
+.google-font-2 {
+  font-family: 'Pacifico', cursive;
+}
+
+.nav-inline {
+  font-family: 'Courgette', sans-serif;
 }
