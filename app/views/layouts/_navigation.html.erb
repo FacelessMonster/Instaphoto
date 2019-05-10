@@ -16,6 +16,7 @@
               <%= current_user.email %>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <%=link_to 'Profile', edit_user_registration_path, class: "nav-link active destroy_session" %>
               <%=link_to 'Exit', destroy_user_session_path, class: "nav-link active destroy_session", method: :delete %>
             </div>
           </li>
@@ -25,25 +26,3 @@
   </nav>
 
 </div>
-
-
-
-
-<!-- <ul class="nav nav-inline">
-  <li class="nav-item">
-    <%=link_to 'Home', root_path, class: "nav-link active" %>
-  </li>
-  <li class="nav-item">
-    <%=link_to 'About', pages_about_path, class: "nav-link active" %>
-  </li>
-  <% if user_signed_in? %>
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      <%=current_user.email%>
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <%=link_to 'Exit', destroy_user_session_path, class: "nav-link active destroy_session", method: :delete %>
-    </div>
-  </div>
-  <% end %>
-</ul> -->
