@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Courgette|Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Courgette|Pacifico|Niconne');
 $display4-size: 2.5rem !default;
 $jumbotron-bg: rgba(255,255,255, 0.2);
+$navbar-light-brand-hover-color: rgba(4, 147, 114, 1);
+$navbar-light-active-color: rgba(46, 49, 49, 1);
 
 @import "bootstrap";
 
@@ -18,25 +20,21 @@ $jumbotron-bg: rgba(255,255,255, 0.2);
   background-color: rgba(104, 195, 163, 1);
 }
 
-.active {
-  color: rgba(46, 49, 49, 1);
-  font-size: 1.5rem;
-}
-
-.active:hover {
-  color: rgba(22, 160, 133, 1);
-}
-
-.nav-inline {
+.navbar-light {
   background-color: rgba(210, 215, 211, 0.2);
-    position: relative;
+  position: relative;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .container {
   position: relative;
 }
 
-.dropdown-menu {
-  background-color: rgba(90,98,104, 1);
+.dropdown {
+  position: absolute;
+  right: 0%;
+  background-color: rgba(210, 215, 211, 0);
+  height: 100%;
 }
 
 .btn-secondary {
@@ -47,19 +45,26 @@ $jumbotron-bg: rgba(255,255,255, 0.2);
 }
 
 .destroy_session {
-  color: rgba(255,255,255, 1);
+  background-color: rgba(210, 215, 211, 0.2);
 }
 
-.dropdown {
-  height: 100%;
-  position: absolute;
-  right: 0%;
+.navbar {
+  font-family: 'Courgette', sans-serif;
+    color: rgba(46, 49, 49, 1);
+
+}
+
+.dropdown-menu {
+  background-color: rgba(210, 215, 211, 0.2);
+
 }
 
 .google-font-2 {
   font-family: 'Pacifico', cursive;
 }
 
-.nav-inline {
-  font-family: 'Courgette', sans-serif;
+
+.navbar-brand {
+  font-family: 'Niconne', cursive;
+  font-size: 2rem;
 }
