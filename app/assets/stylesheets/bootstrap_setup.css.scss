@@ -53,12 +53,13 @@ body {
 
 .photo-card {
   display: inline-block;
-  margin-left: 5px;
-  margin-right: 5px;
-  margin-top: 10px;
+  background-color: rgba(210, 215, 211, 0);
+  border-color: rgba(210, 215, 211, 0);
 }
-
-.index-card-image {
+.photo-card:hover {
+  border-color: rgba(85, 85, 85, 0.2);
+}
+.index-incard-image {
   width: 100%;
 }
 
