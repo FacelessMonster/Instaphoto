@@ -16,7 +16,7 @@ class PhotosController < ApplicationController
   end
 
   def create
-    @photo = Photo.new(photo_params)
+    @photo = Photo.new(photo_params.merge(user_id: current_user.id))
       if @photo.save
         redirect_to @photo, notice: 'Photo was successfully created.'
       else

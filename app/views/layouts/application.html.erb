@@ -9,15 +9,19 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="container-background">
-    <div class="container-fluid ">
-        <%= render "layouts/navigation" %>
+  <% if user_signed_in? %>
+    <body class="container-background2">
+  <% else %>
+    <body class="container-background">
+  <% end %>
+      <div class="container-fluid ">
+          <%= render "layouts/navigation" %>
 
-        <div class="container">
-          <p class="notice"><%= notice %></p>
-          <p class="alert"><%= alert %></p>
-        </div>
-        <%= yield %>
-    </div>
-  </body>
+          <div class="container">
+            <p class="notice"><%= notice %></p>
+            <p class="alert"><%= alert %></p>
+          </div>
+          <%= yield %>
+      </div>
+    </body>
 </html>

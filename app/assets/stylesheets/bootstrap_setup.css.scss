@@ -19,6 +19,14 @@ body {
   background-attachment: fixed;
 }
 
+.container-background2 {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-image: url(image_path('background2'));
+  background-attachment: fixed;
+}
+
 .btn-success {
   background-color: rgba(77, 175, 124, 1);
 }

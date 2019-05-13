@@ -1,9 +1,13 @@
-<p id="notice"><%= notice %></p>
+<div class="card mb-3" style="max-width: 18rem;">
+  <div class="card-body">
 
-<p>
-  <strong>Description:</strong>
-  <%= @photo.description %>
-</p>
 
-<%= link_to 'Edit', edit_photo_path(@photo) %> |
-<%= link_to 'Back', photos_path %>
+    <p>
+      <strong>Description:</strong>
+      <%= @photo.description %>
+    </p>
+
+    <%= link_to 'Edit', edit_photo_path(@photo) %> |
+    <%= link_to 'Back', photos_path %>
+  </div>
+</div>
