@@ -1,13 +1,17 @@
-<div class="card mb-3" style="max-width: 18rem;">
-  <div class="card-body">
+<div class="container show-container">
+  <div class="card photo-card">
+    <div class="card-body">
 
-
-    <p>
-      <strong>Description:</strong>
-      <%= @photo.description %>
-    </p>
-
-    <%= link_to 'Edit', edit_photo_path(@photo) %> |
-    <%= link_to 'Back', photos_path %>
+      <%= image_tag @photo.image.url(:large) %>
+      <p>
+        <strong>Description:</strong>
+        <%= @photo.description %>
+      </p>
+      <% if @photo.user == current_user %>
+      <%= link_to 'Edit', edit_photo_path(@photo) %> |
+      <%= link_to 'Destroy', @photo, method: :delete, data: { confirm: "Are you sure?" } %> |
+      <% end %>
+      <%= link_to 'Back', photos_path %>
+    </div>
   </div>
 </div>

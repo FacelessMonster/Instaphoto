@@ -1,29 +1,18 @@
-<% if user_signed_in?%>
-  <div class=" container jumbotron">
-    <h1 class="display-4 google-font-2"><b>Photos</b></h1>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Description</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-  <hr class="my-2">
-    <tbody>
-      <% @photos.each do |photo| %>
-        <tr>
-          <td><%= photo.description %></td>
-          <td><%= link_to 'Show', photo %></td>
-          <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-          <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-
-  <br>
-
-  <%= link_to 'New Photo', new_photo_path %>
+  <div class=" container">
+  <div class="card-columns">
+    <% @photos.each do |photo| %>
+    <div class="card photo-card">
+      <div class="card-body">
+        <%= image_tag photo.image.url(:medium), class: "index-card-image" %><br/>
+        <%= link_to 'Show', photo %>
+          <% if photo.user == current_user %>
+            | <%= link_to 'Edit', edit_photo_path(photo) %> |
+            <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+      </div>
+    </div>
+    <% end %>
   </div>
-<% end %>
+
+  </div>

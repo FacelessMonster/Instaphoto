@@ -51,7 +51,20 @@ body {
   height: 100%;
 }
 
+.photo-card {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 10px;
+}
 
+.index-card-image {
+  width: 100%;
+}
+
+.show-container {
+  text-align: center;
+}
 
 .destroy_session {
   background-color: rgba(210, 215, 211, 0.2);
