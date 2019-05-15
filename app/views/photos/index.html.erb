@@ -6,6 +6,7 @@
       <div class="card-body">
         <%= image_tag photo.image.url(:medium), class: "index-incard-image" %><br/><br/>
         <div><b><%= photo.description %></b></div><br/>
+        <%= link_to photo.user.email, profile_path(photo.user_id) %>
         <%= link_to 'Show', photo %>
           <% if photo.user == current_user %>
             | <%= link_to 'Edit', edit_photo_path(photo) %> |
