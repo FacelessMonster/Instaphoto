@@ -1,5 +1,13 @@
 <div class="container">
-  <div><%=@profile.email%></div>
+  <div><%=@profile.email%>
+  <% if current_user.id != @profile.id%>
+    <% if current_user.subscriptions.find_by_friend_id(@profile.id).nil?%>
+    <%= link_to "Subscribe", subscribe_path%>
+    <% else %>
+    <%= link_to "Unsubscribe", unsubscribe_path%>
+    <% end %>
+  <% end %>
+  </div>
     <div class="card-columns">
       <% @profile.photos.each do |photo| %>
       <div class="card photo-card">
