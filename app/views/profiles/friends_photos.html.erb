@@ -1,0 +1,12 @@
+<div class="card-columns">
+      <% @photos.each do |photo| %>
+      <div class="card photo-card">
+        <div class="card-body">
+          <%= image_tag photo.image.url(:medium), class: "index-incard-image" %><br/><br/>
+          <div><b><%= photo.description %></b></div><br/>
+          <%= link_to photo.user.email, profile_path(photo.user_id)%>
+          <%= link_to 'Show', photo %>
+        </div>
+      </div>
+      <% end %>
+    </div>

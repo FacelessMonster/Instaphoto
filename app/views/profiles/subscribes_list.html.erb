@@ -1,0 +1,9 @@
+<div class="card-columns">
+  <% @subscribes.each do |s|%>
+    <div class="card photo-card">
+      <div class="card-body">
+        <%= link_to s.email, profile_path(s) %>
+      </div>
+    </div>
+  <% end %>
+</div>

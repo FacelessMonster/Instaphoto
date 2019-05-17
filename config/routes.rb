@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   devise_for :users
   root 'pages#landing'
   get 'pages/about'
+  get 'profiles/subscribes_list'
+  get 'profiles/friends_photos'
+  get 'profiles/my_photos'
   get 'profiles/:id' => 'profiles#show', as: 'profile'
   get 'profiles/:id/subscribe' => 'profiles#subscribe', as: 'subscribe'
   get 'profiles/:id/unsubscribe' => 'profiles#unsubscribe', as: 'unsubscribe'

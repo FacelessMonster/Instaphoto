@@ -1,5 +1,5 @@
 class ProfilesController < ApplicationController
-  before_action :set_profile, only: [:show, :subscribe, :unsubscribe]
+  before_action :set_profile, except: [:my_photos, :subscribes_list, :friends_photos]
 
   def subscribe
     if current_user.subscriptions.find_by_friend_id(@profile.id).nil?
@@ -18,12 +18,24 @@ class ProfilesController < ApplicationController
     unless @subscription.nil?
       @subscription.destroy
       redirect_to profile_path(@profile), notice: "Unsubscribed."
-      else 
+      else
         redirect_to profile_path(@profile), notice: "You have not been subscribed."
     end
   end
 
   def show
+  end
+
+  def friends_photos
+    @photos = Photo.where(user_id: current_user.subscriptions.pluck(:friend_id))
+  end
+
+  def subscribes_list
+    @subscribes = User.where(id: current_user.subscriptions.pluck(:friend_id))
+  end
+
+  def my_photos
+    @photos = current_user.photos
   end
 
   private
