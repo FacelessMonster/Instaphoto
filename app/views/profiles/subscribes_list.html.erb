@@ -2,7 +2,7 @@
   <% @subscribes.each do |s|%>
     <div class="card photo-card">
       <div class="card-body">
-        <%= link_to s.email, profile_path(s) %>
+        <%= link_to s.username, profile_path(s) %>
       </div>
     </div>
   <% end %>
