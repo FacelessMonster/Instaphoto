@@ -10,4 +10,5 @@
         </div>
       </div>
       <% end %>
-    </div>
+    </div><br/>
+<%= will_paginate @photos, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination justify-content-center) %>

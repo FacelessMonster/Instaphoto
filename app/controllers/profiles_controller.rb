@@ -27,7 +27,7 @@ class ProfilesController < ApplicationController
   end
 
   def friends_photos
-    @photos = Photo.where(user_id: current_user.subscriptions.pluck(:friend_id))
+    @photos = Photo.where(user_id: current_user.subscriptions.pluck(:friend_id)).order(created_at: :desc).paginate(page: params[:page], per_page: 30)
   end
 
   def subscribes_list
@@ -35,7 +35,7 @@ class ProfilesController < ApplicationController
   end
 
   def my_photos
-    @photos = current_user.photos
+    @photos = current_user.photos.order(created_at: :desc).paginate(page: params[:page], per_page: 30)
   end
 
   private
