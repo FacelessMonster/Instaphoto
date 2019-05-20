@@ -2,12 +2,14 @@
       <% @photos.each do |photo| %>
       <div class="card photo-card">
         <div class="card-body">
-          <%= image_tag photo.image.url(:medium), class: "index-incard-image" %><br/><br/>
-          <div><b><%= photo.description %></b></div><br/>
-          <%= link_to 'Show', photo %>
-          | <%= link_to 'Edit', edit_photo_path(photo) %> |
-          <%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </div>
+          <%= link_to photo do %>
+          <%= image_tag photo.image.url(:medium), class: "index-incard-image" %>
+          <% end %> <br/><br/>
+          <%= photo.description %></div><br/>
+            <span class="invi"><%= link_to edit_photo_path(photo) do %>
+            <%= ion_icon "edit"%>Edit<%end%> |
+            <%= link_to photo, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <%= ion_icon "trash-b"%> Delete <%end%></span>
       </div>
       <% end %>
     </div><br/>

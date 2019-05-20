@@ -26,6 +26,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem "paperclip", "~> 6.0.0"
 gem 'aws-sdk', '~> 3.0'
+gem "font-ionicons-rails"
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

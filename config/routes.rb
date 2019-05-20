@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   get 'profiles/friends_photos'
   get 'profiles/my_photos'
   get 'profiles/:id' => 'profiles#show', as: 'profile'
-  get 'profiles/:id/subscribe' => 'profiles#subscribe', as: 'subscribe'
-  get 'profiles/:id/unsubscribe' => 'profiles#unsubscribe', as: 'unsubscribe'
+  post 'profiles/:id/subscribe' => 'profiles#subscribe', as: 'subscribe'
+  post 'profiles/:id/unsubscribe' => 'profiles#unsubscribe', as: 'unsubscribe'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
