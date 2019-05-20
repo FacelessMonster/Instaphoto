@@ -1,4 +1,5 @@
 <div class="container">
+<%= button_to "Back", photos_path, class: "btn btn-dark", method: :get %>
   <div style="text-align:center"><h3><%=@profile.username%></h3>
   <% if current_user.id != @profile.id%>
     <% if current_user.subscriptions.find_by_friend_id(@profile.id).nil?%>
@@ -26,5 +27,4 @@
         </div>
       <% end %>
     </div>
-  <%= link_to "Back", photos_path%>
 </div>
