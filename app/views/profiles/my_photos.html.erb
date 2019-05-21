@@ -7,9 +7,9 @@
           <% end %> <br/><br/>
           <%= photo.description %></div><br/>
             <span class="invi"><%= link_to edit_photo_path(photo) do %>
-            <%= ion_icon "edit"%>Edit<%end%> |
+            <%= ion_icon "edit"%><%= t('edit')%><%end%> |
             <%= link_to photo, method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <%= ion_icon "trash-b"%> Delete <%end%></span>
+            <%= ion_icon "trash-b"%><%= t('delete')%><%end%></span>
       </div>
       <% end %>
     </div><br/>

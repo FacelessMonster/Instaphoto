@@ -1,11 +1,11 @@
 <div class="container">
-<%= button_to "Back", photos_path, class: "btn btn-dark", method: :get %>
+<%= button_to t('back'), photos_path, class: "btn btn-dark", method: :get %>
   <div style="text-align:center"><h3><%=@profile.username%></h3>
   <% if current_user.id != @profile.id%>
     <% if current_user.subscriptions.find_by_friend_id(@profile.id).nil?%>
-    <%= button_to "Subscribe", subscribe_path, class: "btn btn-success"%>
+    <%= button_to t('subscribe'), subscribe_path, class: "btn btn-success"%>
     <% else %>
-    <%= button_to "Unsubscribe", unsubscribe_path, class: "btn btn-dark"%>
+    <%= button_to t('unsubscribe'), unsubscribe_path, class: "btn btn-dark"%>
     <% end %>
   <% end %>
   <br/>
@@ -20,9 +20,9 @@
           <%= photo.description %></div><br/>
           <span class="invi"><% if photo.user == current_user %>
             <%= link_to edit_photo_path(photo) do %>
-            <%= ion_icon "edit"%>Edit<%end%> |
+            <%= ion_icon "edit"%><%= t('edit')%><%end%> |
             <%= link_to photo, method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <%= ion_icon "trash-b"%> Delete <%end%></span>
+            <%= ion_icon "trash-b"%><%= t('delete')%><%end%></span>
           <% end %>
         </div>
       <% end %>

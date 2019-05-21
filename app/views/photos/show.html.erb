@@ -1,5 +1,6 @@
 <div class="container show-container">
   <div class="card photo-card">
+  <h3><%=link_to @photo.user.username, profile_path(@photo.user)%></h3>
     <div class="card-body">
 
       <%= image_tag @photo.image.url(:large) %>
@@ -8,10 +9,10 @@
         <%= @photo.description %>
       </p>
       <% if @photo.user == current_user %>
-      <%= link_to 'Edit', edit_photo_path(@photo) %> |
-      <%= link_to 'Destroy', @photo, method: :delete, data: { confirm: "Are you sure?" } %> |
+      <%= link_to t('edit'), edit_photo_path(@photo) %> |
+      <%= link_to t('delete'), @photo, method: :delete, data: { confirm: "Are you sure?" } %> |
       <% end %>
-      <%= link_to 'Back', photos_path %>
+      <%= link_to t('back'), photos_path %>
     </div>
   </div>
 </div>

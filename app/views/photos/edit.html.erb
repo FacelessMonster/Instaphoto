@@ -1,10 +1,10 @@
 <div class="card mb-3" style="max-width: 18rem;">
-  <div class="card-header">Edit photo</div>
+  <div class="card-header"><%=t('edit_photo')%></div>
   <div class="card-body">
 
     <%= render 'form', photo: @photo %>
 
-    <%= button_to 'Show', @photo, class: "btn btn-dark", method: :get %><br/>
-    <%= button_to 'Back', photos_path, class: "btn btn-dark", method: :get %>
+    <%= button_to t('show'), @photo, class: "btn btn-dark", method: :get %><br/>
+    <%= button_to t('back'), photos_path, class: "btn btn-dark", method: :get %>
 
 </div>

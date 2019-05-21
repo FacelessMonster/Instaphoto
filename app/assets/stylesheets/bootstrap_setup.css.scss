@@ -12,7 +12,7 @@ body {
 }
 
 a {
-  color: rgba(46, 49, 49, 1);
+  color: rgb(39, 41, 41);
 }
 
 a:hover {
@@ -59,7 +59,7 @@ a:hover {
   height: 100%;
 }
 
-span {
+.invi {
   display: none;
 }
 .photo-card:hover > .invi {
@@ -72,8 +72,8 @@ span {
   border-color: rgba(210, 215, 211, 0);
   color: rgb(77, 79, 77);
   text-align: center;
-
 }
+
 .photo-card:hover {
   border-color: rgba(85, 85, 85, 0.2);
   @include invisible(visible);

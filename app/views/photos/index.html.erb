@@ -7,14 +7,14 @@
         <%= link_to photo do %>
         <%= image_tag photo.image.url(:medium), class: "index-incard-image" %>
         <% end %><br/><br/>
-        <%= photo.description %></div><br/>
+        <%= photo.description %></div>
         <span class="invi"><%= link_to profile_path(photo.user_id) do%>
         <%= ion_icon "person"%><%=photo.user.username%><%end%>
         <% if photo.user == current_user %>
           | <%= link_to edit_photo_path(photo) do %>
-          <%= ion_icon "edit"%>Edit<%end%> |
+          <%= ion_icon "edit"%><%=t('edit')%><%end%> |
           <%= link_to photo, method: :delete, data: { confirm: 'Are you sure?' } do %>
-          <%= ion_icon "trash-b"%> Delete <%end%>
+          <%= ion_icon "trash-b"%><%=t('delete')%><%end%>
         <% end %></span>
     </div>
     <% end %>

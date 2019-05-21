@@ -31,3 +31,27 @@
 
 en:
   hello: "Hello world"
+  landing:
+    header: "Share your emotions!"
+    description: "Post your photos and subscribe to your friends posts."
+    cursor: 'Login or register.'
+    login: 'Login'
+    sign_up: 'Sign up'
+  navigation:
+    about: 'About'
+    feed: 'Feed'
+    my_photos: 'My photos'
+    new_photo: 'New photo'
+    subscribes: 'Subscribes'
+    profile: 'Profile'
+    exit: 'Log out'
+  about:
+    header: 'Web application for your photos.'
+  delete: 'Delete'
+  back: 'Back'
+  edit: 'Edit'
+  upload: 'Upload'
+  subscribe: 'Subscribe'
+  unsubscribe: 'Unsubscribe'
+  show: 'Show'
+  edit_photo: 'Edit photo'

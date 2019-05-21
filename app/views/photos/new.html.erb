@@ -1,9 +1,9 @@
 <div class="card mb-3" style="max-width: 18rem;">
-  <div class="card-header">New photo</div>
+  <div class="card-header"><%= t('navigation.new_photo')%></div>
   <div class="card-body">
 
     <%= render 'form', photo: @photo %>
 
-    <%= button_to 'Back', photos_path, class: "btn btn-dark", method: :get %>
+    <%= button_to t('back'), photos_path, class: "btn btn-dark", method: :get %>
   </div>
 </div>

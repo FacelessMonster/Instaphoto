@@ -1,10 +1,10 @@
 <% unless user_signed_in?%>
 <div class=" container jumbotron">
-  <h1 class="display-4 google-font-2"><b>Делитесь своими эмоциями!</b></h1>
-  <p class="lead">Размещайте свои фотографии и подписывайтесь на публикации своих друзей.</p>
+  <h1 class="display-4 google-font-2"><b><%= t('landing.header') %></b></h1>
+  <p class="lead"><%= t('landing.description') %></p>
   <hr class="my-4">
-  <p>Войдите или зарегистрируйтесь.</p>
-  <%= link_to "Вход", new_user_session_path, class: "btn btn-success" %>
-  <%= link_to "Регистрация", new_user_registration_path, class: "btn btn-success" %>
+  <p><%= t('landing.cursor') %></p>
+  <%= link_to t('landing.login'), new_user_session_path, class: "btn btn-success" %>
+  <%= link_to t('landing.sign_up'), new_user_registration_path, class: "btn btn-success" %>
 </div>
 <%end%>
